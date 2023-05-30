@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body>
+    <div class="contenedor">
+
+      <!-- Header donde este el simbolo A -->
+      <header>
+        <nav>
+          <h1><img src="image/Frame 6.png" alt="" /></h1>
+        </nav>
+      </header>
+
+      <!-- Main con el cuadro a encriptar -->
+      <main>
+
+        <section class="section-encriptado">
+
+          <textarea id="texto-encriptar" name="texto" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+
+          <div class="contenedor-botones">
+
+            <p>
+              <i class="fa-solid fa-circle-exclamation" style="color: #2c1847;"></i> Solo letras minúsculas y sin acentos
+            </p>     
+
+            <div class="botones">
+
+              <!-- Botones de encriptar y desencriptar -->
+              <button class="encriptar" onclick="capturarTexto()">Encriptar</button>
+              <button class="desencriptar" onclick="desencriptarTexto()">Desencriptar</button>       
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
+
+      <!-- Section con cuadro a desencriptar -->
+      <section class="section-desencriptado">
+
+        <textarea id="texto-encriptado" name="texto" cols="30" rows="10" readonly></textarea>
+
+        <!-- Boton de copiar -->
+        <button class="boton-copiar" id="copiar" onclick="copiarTexto()">Copiar</button>
+
+        <div class="contenedor-imagen" id="cont-imagen">
+
+          <!-- Imagen y texto -->
+          <img src="image/Muñeco.png" alt="">
+          <p class="parrafo">Ningún mensaje fue encontrado</p>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- Script Font Awesome -->
+    <script src="https://kit.fontawesome.com/1616891057.js" crossorigin="anonymous"></script>
+
+    <!-- Script Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Script interno -->
+    <script src="main.js"></script>
+
+  </body>
+</html>

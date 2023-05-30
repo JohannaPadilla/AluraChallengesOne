@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-uno: #dffdd7;
+    --color-dos: #ffffff;
+    --color-tres: #636262;
+    --color-cuatro: #264434;
+}
+
+body {
+    font-family: 'Unbounded', cursive;
+    background-color: var(--color-tres);
+}
+
+.contenedor {
+    width: 80%;
+    margin: 2em auto;
+    padding: 2em;
+    border-radius: 20px;
+    background-color: var(--color-uno);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+        "header section-desencriptado"
+        "main section-desencriptado";
+}
+
+header {
+    grid-area: header;
+    margin-bottom: 1.5em;
+}
+
+main {
+    grid-area: main;
+}
+
+.section-encriptado{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section-encriptado textarea, .section-desencriptado textarea{
+    width: 100%;
+    height: 600px;
+    border: none;
+    resize: none;
+    background: none;
+    padding: 2em;
+    font-size: 2em;
+    color: var(--color-cuatro);
+    font-family: 'Unbounded', cursive;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+.section-encriptado textarea::placeholder, .section-desencriptado textarea{
+    color: var(--color-cuatro);
+    font-weight: bold;
+}
+.section-encriptado textarea:focus{
+    outline: 1px solid var(--color-cuatro);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--color-tres);
+}
+
+.contenedor-botones{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section-encriptado div p{
+    font-size: 0.8em;
+    font-weight: bolder;
+    color: var(--color-cuatro);
+    margin-bottom: 0.8em;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.encriptar, .desencriptar, .boton-copiar{
+    width: 48%;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 2px solid #264434;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.encriptar{
+    background-color: var(--color-cuatro);
+    color: var(--color-uno);
+}
+
+.desencriptar, .boton-copiar{
+    background-color: var(--color-uno);
+    color: var(--color-cuatro);
+}
+
+.section-desencriptado{
+    grid-area: section-desencriptado;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-dos);
+    background-color: var(--color-dos);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color-tres);
+}
+
+.section-desencriptado textarea{
+    width: 90%;
+    height: 700px;
+    border: none;
+    resize: none;
+    background-color: var(--color-dos);
+    display: none;
+}
+.section-desencriptado textarea:focus{
+    border: none;
+    outline: none;
+}
+
+.boton-copiar{
+    display: none;
+    margin: 1em 0;
+    width: 70%;
+}
+
+.contenedor-imagen{
+    text-align: center;
+    width: 80%;
+}
+
+.parrafo{
+    margin: 1em 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
